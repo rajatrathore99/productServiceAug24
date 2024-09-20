@@ -1,9 +1,14 @@
 package com.example.ProductService.models;
 
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 
+@Entity
 public class Products {
 
+    @Id
+    private long id;
     String name;
     String category;
     String description;
@@ -30,5 +35,13 @@ public class Products {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
     }
 }
